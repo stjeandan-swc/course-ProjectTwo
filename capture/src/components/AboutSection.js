@@ -2,7 +2,7 @@ import React from 'react';
 import home1 from '../img/home1.png';
 
 // Styled Component
-import styled from 'styled-components';
+import {STYLE_ABOUT, STYLE_DESRIPTION, STYLE_HIDE, STYLE_IMAGE} from '../styles';
 
 const AboutSection = () => {
 
@@ -31,38 +31,5 @@ const AboutSection = () => {
         </STYLE_ABOUT>
     );
 };
-
-// Styling
-const STYLE_ABOUT = styled.div`
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: white;
-`;
-
-const STYLE_DESRIPTION = styled.div`
-    flex: 1;
-    padding-right: 5rem;
-    h2{
-        font-weight: lighter;
-    }
-`;
-
-const STYLE_IMAGE = styled.div`
-    flex: 1;
-    overflow: hidden;
-
-    img{
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-`;
-
-const STYLE_HIDE = styled.div`
-    overflow: hidden;
-`;
 
 export default AboutSection;
