@@ -1,7 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import styled from 'styled-components';
 import {useHistory} from 'react-router-dom';
+
+// styles
+import styled from 'styled-components';
+
+// data
 import {MovieState} from '../movieState';
+
+// animation
+import {motion} from 'framer-motion';
+import {pageAnimation} from '../animation';
 
 const MovieDetail = () => {
 
@@ -19,7 +27,7 @@ const MovieDetail = () => {
     }, [movies, url]);
 
     return(
-        <>
+        <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             {movie && (
                 <STYLE_DETAILS>
                     <STYLE_HEADLINE>
@@ -35,11 +43,11 @@ const MovieDetail = () => {
                         ))}
                     </STYLE_AWARDS>
                     <STYLE_IMAGE_DISPLAY>
-                        <img src={movie.secondaryImg} alt="a movie image"/>
+                        <img src={movie.secondaryImg} alt="a movie"/>
                     </STYLE_IMAGE_DISPLAY>
                 </STYLE_DETAILS>
             )};
-        </>
+        </motion.div>
     );
 };
 
