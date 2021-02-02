@@ -14,6 +14,7 @@ export const STYLE_ABOUT = styled.div`
 export const STYLE_DESRIPTION = styled.div`
     flex: 1;
     padding-right: 5rem;
+    z-index: 2;
     h2{
         font-weight: lighter;
     }
@@ -22,6 +23,7 @@ export const STYLE_DESRIPTION = styled.div`
 export const STYLE_IMAGE = styled.div`
     flex: 1;
     overflow: hidden;
+    z-index: 2;
 
     img{
         width: 100%;
